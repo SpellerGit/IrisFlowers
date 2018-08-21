@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527634305235.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4E5DAF6C",
+    "lastKnownWriteTime" : 1527932744,
+    "last_content_update" : 1527932744443,
+    "path" : "~/R/workspace/Projekt/quality_check.R",
+    "project_path" : "quality_check.R",
+    "properties" : {
+        "cursorPosition" : "34,1",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

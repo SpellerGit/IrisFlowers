@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527930022885.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2EAE7059",
+    "lastKnownWriteTime" : 7308604914264011873,
+    "last_content_update" : 1527930022885,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "153A3FA9",
+        "caption" : "IrisFlowers",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=IrisFlowers&cache_key=153A3FA9",
+        "displayedObservations" : "150",
+        "environment" : "",
+        "object" : "IrisFlowers",
+        "preview" : "0",
+        "totalObservations" : "150",
+        "variables" : "5"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

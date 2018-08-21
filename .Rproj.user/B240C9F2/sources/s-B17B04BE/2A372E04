@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527883793872.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2A372E04",
+    "lastKnownWriteTime" : 1527935097,
+    "last_content_update" : 1527935097691,
+    "path" : "~/R/workspace/Projekt/Kmeans_traditional.R",
+    "project_path" : "Kmeans_traditional.R",
+    "properties" : {
+        "cursorPosition" : "12,18",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

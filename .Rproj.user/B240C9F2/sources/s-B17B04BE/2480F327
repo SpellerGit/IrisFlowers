@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527623289234.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2480F327",
+    "lastKnownWriteTime" : 1527931693,
+    "last_content_update" : 1527931693130,
+    "path" : "~/R/workspace/Projekt/grouping.R",
+    "project_path" : "grouping.R",
+    "properties" : {
+        "cursorPosition" : "33,1",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

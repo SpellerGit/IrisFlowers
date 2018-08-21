@@ -1,0 +1,512 @@
+View(zobacz[[3]])
+library(DEoptim)
+source("Kmeans_traditional.R")
+source("Kmeans_evolutionary.R")
+# minmal and maximal values taken from UCI side
+sepal_lmin <- 4.3 # minimal length in cm
+sepal_lmax <- 7.9 # maximal length in cm
+sepal_wmin <- 2.0 # minimal width in cm
+sepal_wmax <- 4.4 # maximal width in cm
+petal_lmin <- 1.0
+petal_lmax <- 6.9
+petal_wmin <- 0.1
+petal_wmax <- 2.5
+K <- 3                        # number of centroids
+C <- list()                   # list of grouped elements
+traditional_iterations <- 100 # number of iterations in traditional alghoritm
+population_members <- 5       # number of population members in DEoptim
+evolutionary_iterations <- 20  # number of DEoptim iterations
+IrisFlowers <- read.table("IrisFlowers.txt", header=FALSE, sep=",", quote="") # data for grouping
+# Traditional version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+# Kmeans_traditional(K,sepal_lmin,sepal_lmax,
+#                      sepal_wmin,sepal_wmax,
+#                      petal_lmin,petal_lmax,
+#                      petal_wmin,petal_wmax,
+#                      IrisFlowers,
+#                      traditional_iterations)
+# Evolutionary version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+evo_grouped<-Kmeans_evolutionary(K, sepal_lmin,sepal_lmax,
+sepal_wmin,sepal_wmax,
+petal_lmin,petal_lmax,
+petal_wmin,petal_wmax,
+IrisFlowers,
+population_members,
+evolutionary_iterations)
+library(DEoptim)
+source("Kmeans_traditional.R")
+source("Kmeans_evolutionary.R")
+# minmal and maximal values taken from UCI side
+sepal_lmin <- 4.3 # minimal length in cm
+sepal_lmax <- 7.9 # maximal length in cm
+sepal_wmin <- 2.0 # minimal width in cm
+sepal_wmax <- 4.4 # maximal width in cm
+petal_lmin <- 1.0
+petal_lmax <- 6.9
+petal_wmin <- 0.1
+petal_wmax <- 2.5
+K <- 3                        # number of centroids
+C <- list()                   # list of grouped elements
+traditional_iterations <- 100 # number of iterations in traditional alghoritm
+population_members <- 5       # number of population members in DEoptim
+evolutionary_iterations <- 4  # number of DEoptim iterations
+IrisFlowers <- read.table("IrisFlowers.txt", header=FALSE, sep=",", quote="") # data for grouping
+# Traditional version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+# Kmeans_traditional(K,sepal_lmin,sepal_lmax,
+#                      sepal_wmin,sepal_wmax,
+#                      petal_lmin,petal_lmax,
+#                      petal_wmin,petal_wmax,
+#                      IrisFlowers,
+#                      traditional_iterations)
+# Evolutionary version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+evo_grouped<-Kmeans_evolutionary(K, sepal_lmin,sepal_lmax,
+sepal_wmin,sepal_wmax,
+petal_lmin,petal_lmax,
+petal_wmin,petal_wmax,
+IrisFlowers,
+population_members,
+evolutionary_iterations)
+summary(evo_grouped)
+View(evo_grouped)
+View(evo_grouped[[1]])
+View(evo_grouped[[3]])
+View(evo_grouped[[1]])
+View(evo_grouped[[2]])
+View(evo_grouped[[3]])
+print("a")
+print("a");print("b")
+View(IrisFlowers)
+print("to jest:","tekst")
+print(c("to ja","a ja nie"))
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped)[[K]]){
+if(evo_grouped[[K]][i,5]=="Iris-setosa"){
+i_set <- iset + 1
+}
+else if(evo_grouped[[K]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[K]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j))
+print(c("Iris setosa =",i_set/(i_ver+i_vir) ))
+print(c("Iris versicolor =",i_ver/(i_set+i_vir) ))
+print(c("Iris virginica =",i_vir/(i_set+i_ver) ))
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[K]])){
+if(evo_grouped[[K]][i,5]=="Iris-setosa"){
+i_set <- iset + 1
+}
+else if(evo_grouped[[K]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[K]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j))
+print(c("Iris setosa =",i_set/(i_ver+i_vir) ))
+print(c("Iris versicolor =",i_ver/(i_set+i_vir) ))
+print(c("Iris virginica =",i_vir/(i_set+i_ver) ))
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- iset + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j))
+print(c("Iris setosa =",i_set/(i_ser+i_ver+i_vir) ))
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir) ))
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir) ))
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j))
+print(c("Iris setosa =",i_set/(i_ser+i_ver+i_vir) ))
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir) ))
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir) ))
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j))
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir) ))
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir) ))
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir) ))
+}
+cat(sprintf("\"%f\" \"%f\"\n", df$evo_grouped[[1]], df$evo_grouped[[1]]))
+cat(sprintf("\"%f\" \"%f\"\n", 1, 2)
+)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir) ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir) ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir) ), quote = FALSE)
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100,"%" ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100,"%" ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100,"%" ), quote = FALSE)
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j, "%"), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100,"%" ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100,"%" ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100,"%" ), quote = FALSE)
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+}
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print("In percents:", quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+}
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100 )
+i_ver <- i_ver + 1, quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+}
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+}
+# Just to show the accuracy of the best centroids from the evolutionary version of algorithm
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+}
+library(DEoptim)
+source("Kmeans_traditional.R")
+source("Kmeans_evolutionary.R")
+# minmal and maximal values taken from UCI side
+sepal_lmin <- 4.3 # minimal length in cm
+sepal_lmax <- 7.9 # maximal length in cm
+sepal_wmin <- 2.0 # minimal width in cm
+sepal_wmax <- 4.4 # maximal width in cm
+petal_lmin <- 1.0
+petal_lmax <- 6.9
+petal_wmin <- 0.1
+petal_wmax <- 2.5
+K <- 4                        # number of centroids <- it is not
+C <- list()                   # list of grouped elements
+traditional_iterations <- 100 # number of iterations in traditional alghoritm
+population_members <- 5       # number of population members in DEoptim (minimal 5)
+evolutionary_iterations <- 4  # number of DEoptim iterations ( minimal 4)
+IrisFlowers <- read.table("IrisFlowers.txt", header=FALSE, sep=",", quote="") # data for grouping
+# Traditional version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+# Kmeans_traditional(K,sepal_lmin,sepal_lmax,
+#                      sepal_wmin,sepal_wmax,
+#                      petal_lmin,petal_lmax,
+#                      petal_wmin,petal_wmax,
+#                      IrisFlowers,
+#                      traditional_iterations)
+# Evolutionary version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+evo_grouped <- Kmeans_evolutionary(K, sepal_lmin,sepal_lmax,
+sepal_wmin,sepal_wmax,
+petal_lmin,petal_lmax,
+petal_wmin,petal_wmax,
+IrisFlowers,
+population_members,
+evolutionary_iterations)
+# Just to show the accuracy of the best centroids from the evolutionary version of algorithm
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+}
+View(evo_grouped)
+library(DEoptim)
+source("Kmeans_traditional.R")
+source("Kmeans_evolutionary.R")
+# minmal and maximal values taken from UCI side
+sepal_lmin <- 4.3 # minimal length in cm
+sepal_lmax <- 7.9 # maximal length in cm
+sepal_wmin <- 2.0 # minimal width in cm
+sepal_wmax <- 4.4 # maximal width in cm
+petal_lmin <- 1.0
+petal_lmax <- 6.9
+petal_wmin <- 0.1
+petal_wmax <- 2.5
+K <- 4                        # number of centroids <- it is not
+C <- list()                   # list of grouped elements
+traditional_iterations <- 100 # number of iterations in traditional alghoritm
+population_members <- 5       # number of population members in DEoptim (minimal 5)
+evolutionary_iterations <- 4  # number of DEoptim iterations ( minimal 4)
+IrisFlowers <- read.table("IrisFlowers.txt", header=FALSE, sep=",", quote="") # data for grouping
+# Traditional version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+# Kmeans_traditional(K,sepal_lmin,sepal_lmax,
+#                      sepal_wmin,sepal_wmax,
+#                      petal_lmin,petal_lmax,
+#                      petal_wmin,petal_wmax,
+#                      IrisFlowers,
+#                      traditional_iterations)
+# Evolutionary version of algorithm. Due to the high execution time
+# it is recommended to select one of the examined versions of algorithm
+evo_grouped <- Kmeans_evolutionary(K, sepal_lmin,sepal_lmax,
+sepal_wmin,sepal_wmax,
+petal_lmin,petal_lmax,
+petal_wmin,petal_wmax,
+IrisFlowers,
+population_members,
+evolutionary_iterations)
+# Just to show the accuracy of the best centroids from the evolutionary version of algorithm
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",i_set/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris versicolor =",i_ver/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+print(c("Iris virginica =",i_vir/(i_set+i_ver+i_vir)*100 ), quote = FALSE)
+}
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",round(i_set/(i_set+i_ver+i_vir)*100 ), digits=2), quote = FALSE)
+print(c("Iris versicolor =",round(i_ver/(i_set+i_ver+i_vir)*100 ),digints=2), quote = FALSE)
+print(c("Iris virginica =",round(i_vir/(i_set+i_ver+i_vir)*100 ),digits=2), quote = FALSE)
+}
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",round(i_set/(i_set+i_ver+i_vir)*100,digits=2) ), quote = FALSE)
+print(c("Iris versicolor =",round(i_ver/(i_set+i_ver+i_vir)*100.digits=2) ), quote = FALSE)
+print(c("Iris virginica =",round(i_vir/(i_set+i_ver+i_vir)*100,digits=2) ), quote = FALSE)
+}
+# it is not made for traditional version of algorithm
+print("In percents:", quote = FALSE)
+for ( j in 1:K){
+i_set <- 0
+i_ver <- 0
+i_vir <- 0
+for ( i in 1:nrow(evo_grouped[[j]])){
+if(evo_grouped[[j]][i,5]=="Iris-setosa"){
+i_set <- i_set + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-versicolor"){
+i_ver <- i_ver + 1
+}
+else if(evo_grouped[[j]][i,5]=="Iris-virginica")
+i_vir <- i_vir + 1
+}
+print(c("Table", j), quote = FALSE)
+print(c("Iris setosa =",round(i_set/(i_set+i_ver+i_vir)*100,digits=2) ), quote = FALSE)
+print(c("Iris versicolor =",round(i_ver/(i_set+i_ver+i_vir)*100,digits=2) ), quote = FALSE)
+print(c("Iris virginica =",round(i_vir/(i_set+i_ver+i_vir)*100,digits=2) ), quote = FALSE)
+}

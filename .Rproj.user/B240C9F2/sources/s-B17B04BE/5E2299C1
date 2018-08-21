@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527883849684.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5E2299C1",
+    "lastKnownWriteTime" : 1527947121,
+    "last_content_update" : 1527947121209,
+    "path" : "~/R/workspace/Projekt/Kmeans_evolutionary.R",
+    "project_path" : "Kmeans_evolutionary.R",
+    "properties" : {
+        "cursorPosition" : "42,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
